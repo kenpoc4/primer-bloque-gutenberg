@@ -9,3 +9,4 @@
         7.- Leer los contenidos gusrdados en save()
 */
 import "./boxes";
+import "./menu";

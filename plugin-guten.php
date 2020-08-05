@@ -73,5 +73,21 @@ function pizza_registro_bloque() {
         );
     }
 
+    // Registrando un bloque dinimico
+    register_block_type(
+        'pg/menu',
+        array(
+            'editor_script'     => 'pg-block',
+            'editor_style'      => 'pg-editor-styles',
+            'style'             => 'pg-frontend-styles',
+            'render_callback'   =>  'sitio_especialidades_front_end'
+        )
+    );
+
 }
 add_action('init', 'pizza_registro_bloque');
+
+// COnsulta a la base de datos para mostrar los resultados en el frontend
+function sitio_especialidades_front_end() {
+    return 'en el front end';
+}
